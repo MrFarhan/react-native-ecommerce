@@ -34,7 +34,7 @@ function CustomDrawer(props) {
                 <Image source={imagePath.profileAvatar} />
               </View>
               <View>
-                <Text>Muhammad Farhan</Text>
+                <Text style={styles.username}>Muhammad Farhan</Text>
                 <Coin count="2,048" />
               </View>
             </View>

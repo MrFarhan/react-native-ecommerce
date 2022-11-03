@@ -5,7 +5,7 @@ const {height} = Dimensions.get('window');
 export const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
-    height: height ,
+    height: height,
   },
   logoGroup: {
     flexDirection: 'row',
@@ -15,8 +15,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   tagLine: {
+    fontFamily: 'HelveticaNeue',
     paddingHorizontal: 15,
-    color: 'black',
+    color: colors.primaryBlack,
     paddingBottom: 10,
     paddingTop: 0,
     fontSize: 12,
@@ -29,8 +30,13 @@ export const styles = StyleSheet.create({
   profileImageContainer: {
     paddingRight: 9,
   },
+  username: {
+    fontFamily: 'SourceSansPro-SemiBold',
+    fontSize:14,
+    color: colors.primaryBlack,
+  },
   bottomGroup: {
-    paddingBottom:50
+    paddingBottom: 50,
     // position:"absolute",
     // bottom:0
   },
