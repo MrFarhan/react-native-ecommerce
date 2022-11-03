@@ -7,6 +7,8 @@ import SMCard from '../../components/SMCard';
 import imagePath from '../../../constants/imagePath';
 import colors from '../../../constants/colors';
 import LGCarousel from '../../components/LGCarousel';
+import LGCard from '../../components/LGCard';
+import ReviewCard from '../../components/ReviewCard';
 
 const Home = ({navigation}) => {
   const partnersData = [
@@ -30,12 +32,15 @@ const Home = ({navigation}) => {
     {image: imagePath.carousel1},
     {image: imagePath.carousel2},
   ];
+
+  // const reviewCardData = [
+  //   {image: imagePath.carousel1},
+  //   {image: imagePath.carousel2},
+  // ];
   return (
     <View>
       <Header title="Home" />
-      <View>
-        <LGCarousel title={'Brand Offers'} data={brandOffersData} />
-      </View>
+      <LGCarousel title={'Brand Offers'} data={brandOffersData} />
       <SMCard title={'Partners'} data={partnersData} />
       <SMCard
         title={'Categories'}
@@ -54,6 +59,8 @@ const Home = ({navigation}) => {
         }}
         imageStyle={{height: 40, width: 40}}
       />
+      
+      <LGCard title={'Reviews'}  />
     </View>
   );
 };

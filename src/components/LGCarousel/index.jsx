@@ -12,7 +12,7 @@ import colors from '../../../constants/colors';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 
-const LGCard = ({data}) => {
+const LGCarousel = ({data}) => {
   const [activeImage, setActiveImage] = useState(0);
   return (
     <View style={styles.container}>
@@ -55,7 +55,7 @@ const LGCard = ({data}) => {
   );
 };
 
-export default LGCard;
+export default LGCarousel;
 
 const styles = StyleSheet.create({
   container: {
