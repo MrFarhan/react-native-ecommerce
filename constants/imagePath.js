@@ -18,4 +18,19 @@ export default {
   rightArrow: require('../src/assets/Icons/rightarrow.png'),
   drawerLogo: require('../src/assets/images/drawerlogo.jpg'),
 
+  // partners
+  partner1: require('../src/assets/images/partners/partner1.png'),
+  partner2: require('../src/assets/images/partners/partner2.png'),
+  partner3: require('../src/assets/images/partners/partner3.png'),
+  partner4: require('../src/assets/images/partners/partner4.png'),
+  partner4: require('../src/assets/images/partners/partner4.png'),
+  partner5: require('../src/assets/images/partners/partner5.png'),
+
+  // categories
+  category: require('../src/assets/images/categories/category.png'),
+  category1: require('../src/assets/images/categories/category1.png'),
+  category2: require('../src/assets/images/categories/category2.png'),
+  category3: require('../src/assets/images/categories/category3.png'),
+  category4: require('../src/assets/images/categories/category4.png'),
+  category4: require('../src/assets/images/categories/category4.png'),
 };
