@@ -33,4 +33,8 @@ export default {
   category3: require('../src/assets/images/categories/category3.png'),
   category4: require('../src/assets/images/categories/category4.png'),
   category4: require('../src/assets/images/categories/category4.png'),
+
+  // brand offers
+  carousel1: require('../src/assets/images/carousel/carousel1.png'),
+  carousel2: require('../src/assets/images/carousel/carousel2.png'),
 };
