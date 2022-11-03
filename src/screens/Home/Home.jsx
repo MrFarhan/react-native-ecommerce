@@ -1,4 +1,4 @@
-import {Pressable, Text, View} from 'react-native';
+import {Pressable, ScrollView, Text, View} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header/Header';
 import {styles} from './style';
@@ -38,30 +38,32 @@ const Home = ({navigation}) => {
   //   {image: imagePath.carousel2},
   // ];
   return (
-    <View>
+    <>
       <Header title="Home" />
-      <LGCarousel title={'Brand Offers'} data={brandOffersData} />
-      <SMCard title={'Partners'} data={partnersData} />
-      <SMCard
-        title={'Categories'}
-        data={categoriesData}
-        imageProps={{resizeMode: 'contain'}}
-        imageContainerStyle={{
-          marginRight: 10,
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: 15,
-          borderRadius: 10,
-        }}
-        activeContainerStyle={{
-          borderWidth: 1,
-          borderColor: colors.primaryBlue,
-        }}
-        imageStyle={{height: 40, width: 40}}
-      />
-      
-      <LGCard title={'Reviews'}  />
-    </View>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <LGCarousel title={'Brand Offers'} data={brandOffersData} />
+        <SMCard title={'Partners'} data={partnersData} />
+        <SMCard
+          title={'Categories'}
+          data={categoriesData}
+          imageProps={{resizeMode: 'contain'}}
+          imageContainerStyle={{
+            marginRight: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 15,
+            borderRadius: 10,
+          }}
+          activeContainerStyle={{
+            borderWidth: 1,
+            borderColor: colors.primaryBlue,
+          }}
+          imageStyle={{height: 40, width: 40}}
+        />
+
+        <LGCard title={'Reviews'} />
+      </ScrollView>
+    </>
   );
 };
 

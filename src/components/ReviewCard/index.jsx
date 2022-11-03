@@ -2,9 +2,11 @@ import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import imagePath from '../../../constants/imagePath';
 import colors from '../../../constants/colors';
+import VectorIcons from '../../../constants/vectorIcons';
 
 const WIDTH = Dimensions.get('window').width;
 const ReviewCard = ({data}) => {
+  const {FontAwesome, MaterialIcons, MaterialCommunityIcons} = VectorIcons;
   //   const data = [
   //     {
   //       title: 'Fitnglam',
@@ -21,7 +23,6 @@ const ReviewCard = ({data}) => {
   //       image: imagePath.partner2,
   //     },
   //   ];
-  console.warn(data);
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -29,7 +30,16 @@ const ReviewCard = ({data}) => {
           <Image source={data?.image} />
           <View style={styles.titleGroup}>
             <Text style={styles.title}>{data?.title}</Text>
-            <Text style={styles.rating}>{data?.rating}</Text>
+            <View style={styles.starContainer}>
+              {Array.from({length: 5}).map((item, index) => (
+                <FontAwesome
+                  name={index >= data?.rating ? 'star-o' : 'star'}
+                  color={colors.primaryYellow}
+                  style={styles.star}
+                />
+              ))}
+              <Text style={styles.rating}>{data?.rating}</Text>
+            </View>
           </View>
         </View>
         <Text style={styles.date}>{data?.date}</Text>
@@ -73,11 +83,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   rating: {
-    // fontFamily: 'SFUIDisplay-Bold',
+    fontFamily: 'HelveticaNeue',
     color: colors.textGray,
-    fontSize: 16,
+    fontSize: 14,
     justifyContent: 'center',
     alignSelf: 'center',
+    marginLeft: 2,
+  },
+  starContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   date: {
     fontFamily: 'SFUIDisplay-Regular',
