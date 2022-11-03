@@ -5,6 +5,7 @@ import {styles} from './style';
 import NavigationStrings from '../../../constants/NavigationStrings';
 import SMCard from '../../components/SMCard';
 import imagePath from '../../../constants/imagePath';
+import colors from '../../../constants/colors';
 
 const Home = ({navigation}) => {
   const partnersData = [
@@ -31,11 +32,25 @@ const Home = ({navigation}) => {
         <Text>To to Profile</Text>
       </Pressable>
       <SMCard title={'Partners'} data={partnersData} />
-      {/* <SMCard
-        title={'Categories'}
-        data={categoriesData}
-        imageProps={{resizeMode: ''}}
-      /> */}
+      <View style={{paddingHorizontal: 15}}>
+        <SMCard
+          title={'Categories'}
+          data={categoriesData}
+          imageProps={{resizeMode: 'contain'}}
+          imageContainerStyle={{
+            marginRight: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 15,
+            borderRadius: 10,
+          }}
+          activeContainerStyle={{
+            borderWidth: 1,
+            borderColor: colors.primaryBlue,
+          }}
+          imageStyle={{height: 60, width: 50}}
+        />
+      </View>
     </View>
   );
 };
