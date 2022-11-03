@@ -1,3 +1,4 @@
-export default colors= {
-    primaryBlue:"#0D74B3"
-}
+export default {
+  primaryBlue: '#0D74B3',
+  primaryGray:"#EFF0F0"
+};

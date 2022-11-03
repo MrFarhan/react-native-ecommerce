@@ -4,8 +4,10 @@ import {styles} from './style';
 import DrawerHandle from '../../assets/Icons/DrawerHandle.png';
 import Search from '../../assets/Icons/Search.png';
 import Coin from '../CoinBadge/Coin';
+import {useNavigation} from '@react-navigation/native';
 
 const Header = ({title, goBack}) => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -14,9 +16,9 @@ const Header = ({title, goBack}) => {
             <Text>Go back</Text>
           </TouchableOpacity>
         ) : (
-          <View>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Image source={DrawerHandle} style={styles.drawerHandle} />
-          </View>
+          </TouchableOpacity>
         )}
         <Text style={styles.title}>{title}</Text>
         <View style={styles.coinGroup}>

@@ -8,7 +8,7 @@ const Home = ({navigation}) => {
   return (
     <View>
       <Header title="Home" />
-      <Pressable onPress={() => navigation.navigate(NavigationStrings.BRANDS)}>
+      <Pressable onPress={() => navigation.navigate(NavigationStrings.GAMIFICATION)}>
         <Text>To to Profile</Text>
       </Pressable>
     </View>

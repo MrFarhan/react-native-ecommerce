@@ -1,0 +1,44 @@
+import {Dimensions, StyleSheet} from 'react-native';
+import colors from '../../constants/colors';
+const {height} = Dimensions.get('window');
+
+export const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'space-between',
+    height: height ,
+  },
+  logoGroup: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 15,
+    paddingVertical: 20,
+    alignItems: 'center',
+  },
+  tagLine: {
+    paddingHorizontal: 15,
+    color: 'black',
+    paddingBottom: 10,
+    paddingTop: 0,
+    fontSize: 12,
+  },
+  profileGroup: {
+    flexDirection: 'row',
+    padding: 15,
+    backgroundColor: colors.primaryGray,
+  },
+  profileImageContainer: {
+    paddingRight: 9,
+  },
+  bottomGroup: {
+    paddingBottom:50
+    // position:"absolute",
+    // bottom:0
+  },
+  termsGroup: {
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+  },
+  linkText: {
+    color: colors.primaryBlue,
+  },
+});

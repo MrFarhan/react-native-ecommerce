@@ -3,6 +3,12 @@ export default {
   BRANDS: 'Brands',
   TABS: 'TABS',
   GAMIFICATION: 'Gamification',
+  GAMIFICATION_BOTTOM: 'Gamification_Bottom',
   WALLET: 'Wallet',
   ALERTS: 'Alerts',
+  ALL_DEALS:'All Deals',
+  CATEGORIES:'Categories',
+  WISHLIST:'Wishlist',
+  MY_REVIEWS:'My Reviews',
+  SETTINGS:'Settings'
 };

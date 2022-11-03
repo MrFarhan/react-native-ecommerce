@@ -3,3 +3,8 @@ export {default as Brands} from './Brands/Brands';
 export {default as Gamification} from './Gamification/Gamification';
 export {default as Wallet} from './Wallet/Wallet';
 export {default as Alerts} from './Alerts/Alerts';
+export {default as AllDeals} from './AllDeals/AllDeals';
+export {default as Categories} from './Categories/Categories';
+export {default as Wishlist} from './Wishlist/Wishlist';
+export {default as MyReviews} from './MyReviews/MyReviews';
+export {default as Settings} from './Settings/Settings';
