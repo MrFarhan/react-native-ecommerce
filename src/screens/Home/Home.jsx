@@ -9,20 +9,20 @@ import colors from '../../../constants/colors';
 
 const Home = ({navigation}) => {
   const partnersData = [
-    imagePath.partner1,
-    imagePath.partner2,
-    imagePath.partner3,
-    imagePath.partner4,
-    imagePath.partner5,
-    imagePath.partner1,
-    imagePath.partner2,
+    {image: imagePath.partner1},
+    {image: imagePath.partner2},
+    {image: imagePath.partner3},
+    {image: imagePath.partner4},
+    {image: imagePath.partner5},
+    {image: imagePath.partner1},
+    {image: imagePath.partner2},
   ];
 
   const categoriesData = [
-    imagePath.category1,
-    imagePath.category2,
-    imagePath.category3,
-    imagePath.category4,
+    {image: imagePath.category1, bottomLabel: 'Fitness'},
+    {image: imagePath.category2, bottomLabel: 'Diet'},
+    {image: imagePath.category3, bottomLabel: 'Retail'},
+    {image: imagePath.category4, bottomLabel: 'Health'},
   ];
   return (
     <View>
@@ -32,7 +32,7 @@ const Home = ({navigation}) => {
         <Text>To to Profile</Text>
       </Pressable>
       <SMCard title={'Partners'} data={partnersData} />
-      <View style={{paddingHorizontal: 15}}>
+      <View>
         <SMCard
           title={'Categories'}
           data={categoriesData}
@@ -48,7 +48,7 @@ const Home = ({navigation}) => {
             borderWidth: 1,
             borderColor: colors.primaryBlue,
           }}
-          imageStyle={{height: 60, width: 50}}
+          imageStyle={{height: 40, width: 40}}
         />
       </View>
     </View>

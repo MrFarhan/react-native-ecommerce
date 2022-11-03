@@ -14,24 +14,31 @@ const SMCard = ({
   const [activeItem, setActiveItem] = useState(27);
   const cardRenderer = ({item}) => {
     return (
-      <Pressable
-        style={[
-          styles.container,
-          {...imageContainerStyle},
-          {...(activeItem == item && {...activeContainerStyle})},
-        ]}
-        onPress={() => setActiveItem(item)}>
-        <Image
-          source={item}
-          style={styles.image}
-          {...imageProps}
-          {...imageStyle}
-        />
-      </Pressable>
+      <View>
+        <Pressable
+          style={[
+            styles.container,
+            {...imageContainerStyle},
+            {...(activeItem == item?.image && {...activeContainerStyle})},
+          ]}
+          onPress={() => setActiveItem(item?.image)}>
+          <Image
+            source={item?.image}
+            style={styles.image}
+            {...imageProps}
+            {...imageStyle}
+          />
+        </Pressable>
+        {item?.bottomLabel && (
+          <Text style={{textAlign: 'center', marginRight: 10, marginTop: 5}}>
+            {item?.bottomLabel}
+          </Text>
+        )}
+      </View>
     );
   };
   return (
-    <View>
+    <View style={{paddingHorizontal: 15}}>
       {title && <SectionHeader title={title} />}
       <FlatList
         data={data}
