@@ -6,7 +6,7 @@ import NavigationStrings from '../../../constants/NavigationStrings';
 import SMCard from '../../components/SMCard';
 import imagePath from '../../../constants/imagePath';
 import colors from '../../../constants/colors';
-import LGCard from '../../components/LGCard';
+import LGCarousel from '../../components/LGCarousel';
 
 const Home = ({navigation}) => {
   const partnersData = [
@@ -34,7 +34,7 @@ const Home = ({navigation}) => {
     <View>
       <Header title="Home" />
       <View>
-        <LGCard title={'Brand Offers'} data={brandOffersData} />
+        <LGCarousel title={'Brand Offers'} data={brandOffersData} />
       </View>
       <SMCard title={'Partners'} data={partnersData} />
       <SMCard
