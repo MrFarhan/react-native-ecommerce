@@ -4,4 +4,5 @@ export default {
   primaryBlack: '#473E40',
   primaryYellow: '#F8A528',
   textGray: '#9E9E9E',
+  textBlack: '#2C2C2C',
 };

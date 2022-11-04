@@ -54,11 +54,32 @@ const Home = ({navigation}) => {
       title: 'Third Item',
     },
   ];
+
+  const brandCardData = [
+    {
+      title: 'MrFarhan',
+      image: imagePath.carousel1,
+      offerTitle: 'Get 30% off',
+      offerExpiry: '* Expiry date 23 sept 2022',
+      coins: '3500',
+      otherDealsDetail: '53 Deals left',
+      brandLogo: imagePath.partner1,
+    },
+    {
+      title: 'The Info Tech',
+      image: imagePath.carousel2,
+      offerTitle: 'Get 30% off',
+      offerExpiry: '* Expiry date 23 sept 2022',
+      coins: '3500',
+      otherDealsDetail: '77 Deals left',
+      brandLogo: imagePath.partner2,
+    },
+  ];
   return (
     <>
       <Header title="Home" />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <LGCarousel title={'Brand Offers'} data={brandOffersData} />
+        {/* <LGCarousel title={'Brand Offers'} data={brandOffersData} />
         <SMCard title={'Partners'} data={partnersData} />
         <MDCarousel data={CarouselData} title={'Brands'} />
         <SMCard
@@ -81,7 +102,8 @@ const Home = ({navigation}) => {
         <MDCarousel data={CarouselData} title={'Challenges'} />
         <MDCarousel data={CarouselData} title={'New Offers'} />
 
-        <LGCard title={'Reviews'} />
+        <LGCard title={'Reviews'} /> */}
+        <BrandCard data={brandCardData[0]} />
       </ScrollView>
     </>
   );
