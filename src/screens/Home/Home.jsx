@@ -9,6 +9,8 @@ import colors from '../../../constants/colors';
 import LGCarousel from '../../components/LGCarousel';
 import LGCard from '../../components/LGCard';
 import ReviewCard from '../../components/ReviewCard';
+import BrandCard from '../../components/BrandCard';
+import MDCarousel from '../../components/MDCarousel';
 
 const Home = ({navigation}) => {
   const partnersData = [
@@ -37,12 +39,28 @@ const Home = ({navigation}) => {
   //   {image: imagePath.carousel1},
   //   {image: imagePath.carousel2},
   // ];
+
+  const CarouselData = [
+    {
+      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+  ];
   return (
     <>
       <Header title="Home" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <LGCarousel title={'Brand Offers'} data={brandOffersData} />
         <SMCard title={'Partners'} data={partnersData} />
+        <MDCarousel data={CarouselData} title={'Brands'} />
         <SMCard
           title={'Categories'}
           data={categoriesData}
@@ -60,6 +78,8 @@ const Home = ({navigation}) => {
           }}
           imageStyle={{height: 40, width: 40}}
         />
+        <MDCarousel data={CarouselData} title={'Challenges'} />
+        <MDCarousel data={CarouselData} title={'New Offers'} />
 
         <LGCard title={'Reviews'} />
       </ScrollView>
