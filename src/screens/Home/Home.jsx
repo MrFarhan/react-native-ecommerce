@@ -1,4 +1,4 @@
-import {Pressable, ScrollView, Text, View} from 'react-native';
+import {Pressable, SafeAreaView, ScrollView, Text, View} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header/Header';
 import {styles} from './style';
@@ -75,13 +75,59 @@ const Home = ({navigation}) => {
       brandLogo: imagePath.partner2,
     },
   ];
+
+  const ChallengesCardData = [
+    {
+      title: 'MrFarhan',
+      image: imagePath.carousel2,
+      offerTitle: 'Get 30% off',
+      offerExpiry: '* Expiry date 23 sept 2022',
+      coins: '3500',
+      otherDealsDetail: '53 Deals left',
+      brandLogo: imagePath.partner3,
+    },
+    {
+      title: 'The Info Tech',
+      image: imagePath.carousel1,
+      offerTitle: 'Get 30% off',
+      offerExpiry: '* Expiry date 23 sept 2022',
+      coins: '3500',
+      otherDealsDetail: '77 Deals left',
+      brandLogo: imagePath.partner4,
+    },
+  ];
+
+  const NewOfferData = [
+    {
+      title: 'MrFarhan',
+      image: imagePath.carousel1,
+      offerTitle: 'Get 30% off',
+      offerExpiry: '* Expiry date 23 sept 2022',
+      coins: '3500',
+      otherDealsDetail: '53 Deals left',
+      brandLogo: imagePath.partner5,
+    },
+    {
+      title: 'The Info Tech',
+      image: imagePath.carousel2,
+      offerTitle: 'Get 30% off',
+      offerExpiry: '* Expiry date 23 sept 2022',
+      coins: '3500',
+      otherDealsDetail: '77 Deals left',
+      brandLogo: imagePath.partner1,
+    },
+  ];
   return (
-    <>
+    <SafeAreaView >
       <Header title="Home" />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {/* <LGCarousel title={'Brand Offers'} data={brandOffersData} />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{flex: 1, paddingBottom: 600}}>
+        <LGCarousel data={brandOffersData} />
+
         <SMCard title={'Partners'} data={partnersData} />
-        <MDCarousel data={CarouselData} title={'Brands'} />
+        <MDCarousel data={brandCardData} title={'Brand Offers'} />
+
         <SMCard
           title={'Categories'}
           data={categoriesData}
@@ -99,13 +145,12 @@ const Home = ({navigation}) => {
           }}
           imageStyle={{height: 40, width: 40}}
         />
-        <MDCarousel data={CarouselData} title={'Challenges'} />
-        <MDCarousel data={CarouselData} title={'New Offers'} />
+        <MDCarousel data={ChallengesCardData} title={'Challenges'} />
+        <MDCarousel data={NewOfferData} title={'New Offers'} />
 
-        <LGCard title={'Reviews'} /> */}
-        <BrandCard data={brandCardData[0]} />
+        <LGCard title={'Reviews'} />
       </ScrollView>
-    </>
+    </SafeAreaView>
   );
 };
 

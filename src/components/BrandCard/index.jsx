@@ -33,7 +33,6 @@ export default BrandCard;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
     backgroundColor: 'white',
     marginRight: 10,
     height: 250, // position
@@ -53,10 +52,11 @@ const styles = StyleSheet.create({
   imageContainer: {
     position: 'relative',
     height: '100%',
-    borderRadius: 12,
+    // borderRadius: 12,
   },
   image: {
-    borderRadius: 12,
+    borderTopStartRadius: 12,
+    borderTopEndRadius: 12,
 
     width: '100%',
     maxHeight: 150,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   title: {
     color: colors.textGray,
     fontSize: 14,
-    fontFamily: 'SFUIDisplay',
+    fontFamily: 'SFUIDisplay-Regular',
   },
   offerTitle: {
     fontFamily: 'SFUIDisplay-bold',

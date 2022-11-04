@@ -15,6 +15,7 @@ import Animated, {
   useAnimatedStyle,
 } from 'react-native-reanimated';
 import imagePath from '../../../constants/imagePath';
+import BrandCard from '../BrandCard';
 import SectionHeader from '../SectionHeader';
 
 const SRC_WIDTH = Dimensions.get('window').width;
@@ -23,7 +24,7 @@ const SPACING = SRC_WIDTH * 0.02;
 const SIDECARD_LENGTH = (SRC_WIDTH * 0.18) / 2;
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 
-function Item({index, scrollX}) {
+function Item({index, scrollX,data}) {
   const size = useSharedValue(1);
 
   const inputRange = [
@@ -69,13 +70,25 @@ function Item({index, scrollX}) {
           marginRight: index == 2 ? SIDECARD_LENGTH : SPACING,
         },
       ]}>
-      <Image
+      <BrandCard data={data}/>
+      {/* <Image
         source={imagePath.random2}
         style={{width: '100%', height: '100%'}}
-      />
+      /> */}
     </Animated.View>
   );
 }
+//Default data
+const CarouselData = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'First Item',
+  },
+  {
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: 'Second Item',
+  },
+];
 
 export default function MDCarousel({title, data}) {
   const [scrollX, setScrollX] = useState(0);
@@ -99,7 +112,7 @@ export default function MDCarousel({title, data}) {
         data={data}
         horizontal={true}
         renderItem={({item, index}) => {
-          return <Item index={index} scrollX={scrollX} />;
+          return <Item index={index} scrollX={scrollX} data={item}/>;
         }}
         keyExtractor={item => item.id}
         onScroll={event => {
@@ -113,7 +126,7 @@ export default function MDCarousel({title, data}) {
 const styles = StyleSheet.create({
   card: {
     width: CARD_LENGTH,
-    height: 150,
+    // height: 150,
     overflow: 'hidden',
     borderRadius: 15,
   },
