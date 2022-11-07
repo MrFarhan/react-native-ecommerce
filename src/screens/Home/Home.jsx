@@ -11,115 +11,19 @@ import LGCard from '../../components/LGCard';
 import ReviewCard from '../../components/ReviewCard';
 import BrandCard from '../../components/BrandCard';
 import MDCarousel from '../../components/MDCarousel';
+import {
+  brandCardData,
+  brandOffersData,
+  categoriesData,
+  ChallengesCardData,
+  NewOfferData,
+  partnersData,
+} from '../../../constants/helper';
 
 const Home = ({navigation}) => {
-  const partnersData = [
-    {image: imagePath.partner1},
-    {image: imagePath.partner2},
-    {image: imagePath.partner3},
-    {image: imagePath.partner4},
-    {image: imagePath.partner5},
-    {image: imagePath.partner1},
-    {image: imagePath.partner2},
-  ];
-
-  const categoriesData = [
-    {image: imagePath.category1, bottomLabel: 'Fitness'},
-    {image: imagePath.category2, bottomLabel: 'Diet'},
-    {image: imagePath.category3, bottomLabel: 'Retail'},
-    {image: imagePath.category4, bottomLabel: 'Health'},
-  ];
-
-  const brandOffersData = [
-    {image: imagePath.carousel1},
-    {image: imagePath.carousel2},
-  ];
-
-  // const reviewCardData = [
-  //   {image: imagePath.carousel1},
-  //   {image: imagePath.carousel2},
-  // ];
-
-  const CarouselData = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First Item',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second Item',
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third Item',
-    },
-  ];
-
-  const brandCardData = [
-    {
-      title: 'MrFarhan',
-      image: imagePath.carousel1,
-      offerTitle: 'Get 30% off',
-      offerExpiry: '* Expiry date 23 sept 2022',
-      coins: '3500',
-      otherDealsDetail: '53 Deals left',
-      brandLogo: imagePath.partner1,
-    },
-    {
-      title: 'The Info Tech',
-      image: imagePath.carousel2,
-      offerTitle: 'Get 30% off',
-      offerExpiry: '* Expiry date 23 sept 2022',
-      coins: '3500',
-      otherDealsDetail: '77 Deals left',
-      brandLogo: imagePath.partner2,
-    },
-  ];
-
-  const ChallengesCardData = [
-    {
-      title: 'MrFarhan',
-      image: imagePath.carousel2,
-      offerTitle: 'Get 30% off',
-      offerExpiry: '* Expiry date 23 sept 2022',
-      coins: '3500',
-      otherDealsDetail: '53 Deals left',
-      brandLogo: imagePath.partner3,
-    },
-    {
-      title: 'The Info Tech',
-      image: imagePath.carousel1,
-      offerTitle: 'Get 30% off',
-      offerExpiry: '* Expiry date 23 sept 2022',
-      coins: '3500',
-      otherDealsDetail: '77 Deals left',
-      brandLogo: imagePath.partner4,
-    },
-  ];
-
-  const NewOfferData = [
-    {
-      title: 'MrFarhan',
-      image: imagePath.carousel1,
-      offerTitle: 'Get 30% off',
-      offerExpiry: '* Expiry date 23 sept 2022',
-      coins: '3500',
-      otherDealsDetail: '53 Deals left',
-      brandLogo: imagePath.partner5,
-    },
-    {
-      title: 'The Info Tech',
-      image: imagePath.carousel2,
-      offerTitle: 'Get 30% off',
-      offerExpiry: '* Expiry date 23 sept 2022',
-      coins: '3500',
-      otherDealsDetail: '77 Deals left',
-      brandLogo: imagePath.partner1,
-    },
-  ];
   return (
-    <SafeAreaView >
-      <Header title="Home" showSearch/>
+    <SafeAreaView>
+      <Header title="Home" showSearch />
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{flex: 1, paddingBottom: 600}}>

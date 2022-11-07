@@ -25,6 +25,7 @@ export default {
   partner4: require('../src/assets/images/partners/partner4.png'),
   partner4: require('../src/assets/images/partners/partner4.png'),
   partner5: require('../src/assets/images/partners/partner5.png'),
+  all: require('../src/assets/images/partners/all.png'),
 
   // categories
   category: require('../src/assets/images/categories/category.png'),

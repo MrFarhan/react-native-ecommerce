@@ -6,9 +6,14 @@ export const badgeColors = {
   Earned: colors.primaryGreen,
   Burned: colors.primaryBlue,
 };
-const Badge = ({title}) => {
+const Badge = ({title, containerStyle}) => {
   return (
-    <View style={[styles.container, {backgroundColor: badgeColors[title]}]}>
+    <View
+      style={[
+        styles.container,
+        {backgroundColor: badgeColors[title] || colors.primaryBlue},
+        containerStyle,
+      ]}>
       <Text style={styles.text}>{title}</Text>
     </View>
   );
