@@ -4,11 +4,11 @@ import imagePath from '../../../constants/imagePath';
 import colors from '../../../constants/colors';
 
 const Coin = props => {
-  const {count} = props;
+  const {count, coinStyle, coinContainerStyle} = props;
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, coinContainerStyle]}>
       <Image source={imagePath.coinImage} style={styles.coin} />
-      <Text style={styles.count}>{count}</Text>
+      <Text style={[styles.count, coinStyle]}>{count}</Text>
     </View>
   );
 };
@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'white',
     padding: 5,
-    borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#000',

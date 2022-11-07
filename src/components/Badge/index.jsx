@@ -2,21 +2,23 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import colors from '../../../constants/colors';
 
+export const badgeColors = {
+  Earned: colors.primaryGreen,
+  Burned: colors.primaryBlue,
+};
 const Badge = ({title}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: badgeColors[title]}]}>
       <Text style={styles.text}>{title}</Text>
     </View>
   );
 };
 
-export default Badge;
-
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.primaryBlue,
     borderRadius: 5,
     alignItems: 'center',
+    maxWidth: 70,
   },
   text: {
     color: 'white',
@@ -25,3 +27,5 @@ const styles = StyleSheet.create({
     fontFamily: 'SFUIDisplay-Bold',
   },
 });
+
+export default Badge;
