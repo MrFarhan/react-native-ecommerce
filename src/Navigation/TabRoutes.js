@@ -61,6 +61,7 @@ export default function TabRoutes() {
         name={NavigationStrings.GAMIFICATION}
         component={Gamification}
         options={{
+          tabBarStyle: {display: 'none'},
           tabBarIcon: ({focused}) => {
             return (
               <Image
@@ -69,6 +70,9 @@ export default function TabRoutes() {
               />
             );
           },
+          // navigationOptions:()=>{
+          //   return tabBarv
+          // }
         }}
       />
       <Tab.Screen

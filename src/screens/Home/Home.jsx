@@ -119,12 +119,11 @@ const Home = ({navigation}) => {
   ];
   return (
     <SafeAreaView >
-      <Header title="Home" />
+      <Header title="Home" showSearch/>
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{flex: 1, paddingBottom: 600}}>
         <LGCarousel data={brandOffersData} />
-
         <SMCard title={'Partners'} data={partnersData} />
         <MDCarousel data={brandCardData} title={'Brand Offers'} />
 

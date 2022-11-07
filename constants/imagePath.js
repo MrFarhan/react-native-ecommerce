@@ -38,6 +38,8 @@ export default {
   carousel1: require('../src/assets/images/carousel/carousel1.png'),
   carousel2: require('../src/assets/images/carousel/carousel2.png'),
 
+  searchImage: require('../src/assets/Icons/Search.png'),
+
   // random image
   random2: require('../src/assets/images/img1.jpg'),
 };
