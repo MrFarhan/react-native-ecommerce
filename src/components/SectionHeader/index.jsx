@@ -2,11 +2,11 @@ import {Text, View} from 'react-native';
 import React from 'react';
 import {styles} from './style';
 
-const SectionHeader = ({title}) => {
+const SectionHeader = ({title, hideSeeAll}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.Heading}>{title}</Text>
-      <Text style={styles.seeAll}>See All</Text>
+      {!hideSeeAll && <Text style={styles.seeAll}>See All</Text>}
     </View>
   );
 };

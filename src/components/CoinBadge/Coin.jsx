@@ -36,6 +36,8 @@ export const styles = StyleSheet.create({
   },
   coin: {
     marginRight: 6,
+    maxWidth: 20,
+    maxHeight: 20,
   },
   count: {
     color: colors.textBlack,

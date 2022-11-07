@@ -8,6 +8,7 @@ import BottomSheet from '../../components/BottomSheet';
 import Header from '../../components/Header/Header';
 import MapMarker from '../../components/MapMarker';
 import SearchBar from '../../components/Searchbar';
+import SectionHeader from '../../components/SectionHeader';
 // import {styles} from './style';
 // import MapView from 'react-native-maps';
 
@@ -57,7 +58,14 @@ const Gamification = ({navigation}) => {
           </MapView>
         </View>
         <SearchBar />
-        <BottomSheet shouldAlwaysVisible />
+        <BottomSheet
+          shouldAlwaysVisible
+          children={
+            <View style={{paddingHorizontal: 20}}>
+              <SectionHeader title={"Challenges"}/>
+            </View>
+          }
+        />
       </SafeAreaView>
     </View>
   );

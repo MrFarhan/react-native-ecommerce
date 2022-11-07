@@ -42,4 +42,5 @@ export default {
 
   // random image
   random2: require('../src/assets/images/img1.jpg'),
+  ticket: require("../src/assets/images/ticket.png")
 };
