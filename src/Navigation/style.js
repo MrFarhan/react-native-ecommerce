@@ -5,7 +5,8 @@ const {height} = Dimensions.get('window');
 export const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
-    height: height,
+    height: '100%',
+    flex: 1,
   },
   logoGroup: {
     flexDirection: 'row',
@@ -32,7 +33,7 @@ export const styles = StyleSheet.create({
   },
   username: {
     fontFamily: 'SourceSansPro-SemiBold',
-    fontSize:14,
+    fontSize: 14,
     color: colors.primaryBlack,
   },
   bottomGroup: {
