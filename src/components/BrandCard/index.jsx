@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {DEVICE_WIDTH} from '../../../constants/helper';
-import colors from '../../../constants/colors';
+import {DEVICE_WIDTH} from '../../constants/helper';
+import colors from '../../constants/colors';
 import Badge from '../Badge';
 import Coin from '../CoinBadge/Coin';
 

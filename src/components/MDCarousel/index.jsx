@@ -14,7 +14,7 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
 } from 'react-native-reanimated';
-import imagePath from '../../../constants/imagePath';
+import imagePath from '../../constants/imagePath';
 import BrandCard from '../BrandCard';
 import SectionHeader from '../SectionHeader';
 

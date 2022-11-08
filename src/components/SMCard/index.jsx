@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FlatList, Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import SectionHeader from '../SectionHeader';
-import imagePath from '../../../constants/imagePath';
+import imagePath from '../../constants/imagePath';
 
 const SMCard = ({
   title,
@@ -42,7 +42,8 @@ const SMCard = ({
       {title && <SectionHeader title={title} />}
       <FlatList
         data={data}
-        renderItem={cardRenderer}
+        renderItem={(item) => cardRenderer(item)}
+        keyExtractor={(item) => item.id}
         contentContainerStyle={{
           flexDirection: 'row',
         }}

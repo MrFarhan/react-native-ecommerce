@@ -4,7 +4,7 @@ import {styles} from './style';
 import DrawerHandle from '../../assets/Icons/DrawerHandle.png';
 import Coin from '../CoinBadge/Coin';
 import {useNavigation} from '@react-navigation/native';
-import imagePath from '../../../constants/imagePath';
+import imagePath from '../../constants/imagePath';
 
 const Header = ({title, goBack, showSearch}) => {
   const navigation = useNavigation();

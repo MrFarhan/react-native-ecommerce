@@ -1,26 +1,13 @@
 import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../../constants/imagePath';
-import {DEVICE_WIDTH} from '../../../constants/helper';
-import colors from '../../../constants/colors';
+import imagePath from '../../constants/imagePath';
+import {DEVICE_WIDTH, notificationData} from '../../constants/helper';
+import colors from '../../constants/colors';
 
 const NotificationCard = () => {
-  const data = [
-    {
-      title: 'Congratulations! You have successfully earned a voucher from',
-      tagLine: '“AED 50 off on Registration”',
-      uniqueKey: 'Fitness First',
-    },
-    {
-      title: 'Congratulations! You have successfully burned a voucher of from',
-      tagLine: '“Get 10% Off”',
-      uniqueKey: 'Fitness First',
-    },
-  ];
-
   return (
     <FlatList
-      data={data}
+      data={notificationData}
       renderItem={({item}) => {
         return (
           <View style={styles.container}>

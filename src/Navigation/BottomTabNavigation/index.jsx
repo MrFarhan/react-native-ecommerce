@@ -1,10 +1,10 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import NavigationStrings from '../../../constants/NavigationStrings';
-import colors from '../../../constants/colors';
+import NavigationStrings from '../../constants/NavigationStrings';
+import colors from '../../constants/colors';
 import { Alerts, Brands, Gamification, Home, Wallet } from '../../screens';
-import imagePath from '../../../constants/imagePath';
+import imagePath from '../../constants/imagePath';
 
 const BottomTabNavigation = () => {
   const Tab = createBottomTabNavigator();

@@ -36,6 +36,7 @@
 		DCF3765D018C4291BE124B1C /* HelveticaNeue- Medium-Extended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D1E9A55483E480296496304 /* HelveticaNeue- Medium-Extended.ttf */; };
 		E0BB7D965006432AB39DCC26 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF3D0380C6E24320860F4DFD /* icomoon.ttf */; };
 		E51CA13973B9493F81EABCA8 /* HelveticaNeueBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D70FAEF9FBF40A5B8F4FF1C /* HelveticaNeueBd.ttf */; };
+		E7B91D99134B41579A11DD46 /* SFUIDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88342C50A5F84081A64110EB /* SFUIDisplay-Semibold.ttf */; };
 		F17D1889EE4C4A87B8D597BC /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D9EC50D8134267917B01E7 /* SourceSansPro-BoldItalic.ttf */; };
 		F3E97BBA9F1E022A1363CCFD /* libPods-Ecommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 892A49C1180A70E32BAA6B2E /* libPods-Ecommerce.a */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		7C89D4B1F69D46308D30C90F /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Italic.ttf"; path = "../src/assets/fonts/SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Ecommerce/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84AFF5191C1BBA51E6BC2106 /* Pods-Ecommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecommerce.debug.xcconfig"; path = "Target Support Files/Pods-Ecommerce/Pods-Ecommerce.debug.xcconfig"; sourceTree = "<group>"; };
+		88342C50A5F84081A64110EB /* SFUIDisplay-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFUIDisplay-Semibold.ttf"; path = "../src/assets/fonts/SFUIDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		892A49C1180A70E32BAA6B2E /* libPods-Ecommerce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ecommerce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98510FF1A6AD43AA97D8E764 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-ExtraLightItalic.ttf"; path = "../src/assets/fonts/SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		9A7F2E9B04244026837DF92E /* Effra.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Effra.ttf; path = ../src/assets/fonts/Effra.ttf; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				FC3E83D144A34D53A6922DD7 /* SourceSansPro-SemiBold.ttf */,
 				F18EABE0218C4B4FADBDBE95 /* SourceSansPro-SemiBoldItalic.ttf */,
 				CF3D0380C6E24320860F4DFD /* icomoon.ttf */,
+				88342C50A5F84081A64110EB /* SFUIDisplay-Semibold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				CF748EB5FB8F4CC7A775FC65 /* SourceSansPro-SemiBold.ttf in Resources */,
 				30B5A8E1D4E142579FE1734D /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
 				E0BB7D965006432AB39DCC26 /* icomoon.ttf in Resources */,
+				E7B91D99134B41579A11DD46 /* SFUIDisplay-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +674,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -742,7 +746,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

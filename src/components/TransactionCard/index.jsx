@@ -2,7 +2,7 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Coin from '../CoinBadge/Coin';
 import Badge from '../Badge';
-import colors from '../../../constants/colors';
+import colors from '../../constants/colors';
 
 const TransactionCard = ({data}) => {
   return (

@@ -1,6 +1,6 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../../constants/imagePath';
+import imagePath from '../../constants/imagePath';
 
 const MapMarker = ({title,image}) => {
   return (

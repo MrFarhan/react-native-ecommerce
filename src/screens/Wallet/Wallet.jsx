@@ -5,7 +5,7 @@ import {styles} from './style';
 import Coin from '../../components/CoinBadge/Coin';
 import WalletSectionHeader from '../../components/WalletSectionHeader';
 import SMCardTwoColumn from '../../components/SMCardTwoColumn';
-import imagePath from '../../../constants/imagePath';
+import imagePath from '../../constants/imagePath';
 import SectionHeader from '../../components/SectionHeader';
 import TransactionCard from '../../components/TransactionCard';
 
@@ -17,6 +17,7 @@ const Wallet = ({navigation}) => {
 
   const transactionData = [
     {
+      id: 1,
       image: imagePath.partner1,
       title: 'The Info Tech',
       tagLine: 'AED 50 off on Registration',
@@ -26,6 +27,7 @@ const Wallet = ({navigation}) => {
       coinCount: '750',
     },
     {
+      id: 2,
       image: imagePath.partner2,
       title: 'MrFarhan',
       tagLine: 'AED 50 off on Registration',
@@ -35,6 +37,7 @@ const Wallet = ({navigation}) => {
       coinCount: '750',
     },
     {
+      id: 3,
       image: imagePath.partner1,
       title: 'Fitness First',
       tagLine: 'AED 50 off on Registration',
@@ -76,6 +79,7 @@ const Wallet = ({navigation}) => {
         <FlatList
           data={transactionData}
           renderItem={({item}) => <TransactionCard data={item} />}
+          keyExtractor={({item}) => item.id}
         />
       </View>
     </View>

@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Coin from '../CoinBadge/Coin';
-import colors from '../../../constants/colors';
+import colors from '../../constants/colors';
 
 const WalletSectionHeader = () => {
   return (

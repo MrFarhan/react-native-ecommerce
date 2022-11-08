@@ -3,8 +3,8 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import {styles} from './style';
 import SMCard from '../../components/SMCard';
-import {BrandPageData, partnersData} from '../../../constants/helper';
-import colors from '../../../constants/colors';
+import {BrandPageData, partnersData} from '../../constants/helper';
+import colors from '../../constants/colors';
 import MDCard from '../../components/MDCard';
 
 const Brands = ({navigation}) => {
@@ -44,6 +44,8 @@ const Brands = ({navigation}) => {
           numColumns={2}
           data={BrandPageData}
           renderItem={({item}) => <MDCard data={item} />}
+          keyExtractor={({item}) => item.id}
+
         />
       </View>
     </>

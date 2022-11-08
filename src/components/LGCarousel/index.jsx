@@ -7,7 +7,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import colors from '../../../constants/colors';
+import colors from '../../constants/colors';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;

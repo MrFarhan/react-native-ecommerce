@@ -3,9 +3,9 @@ import {
   DrawerItem,
   DrawerItemList,
 } from '@react-navigation/drawer';
-import {Image, Pressable, SafeAreaView, Text, View} from 'react-native';
-import imagePath from '../../constants/imagePath';
-import NavigationStrings from '../../constants/NavigationStrings';
+import {Image, Pressable, Text, View} from 'react-native';
+import imagePath from '../constants/imagePath';
+import NavigationStrings from '../constants/NavigationStrings';
 import Button from '../components/Button/Button';
 import Coin from '../components/CoinBadge/Coin';
 import {styles} from './style';
@@ -46,35 +46,55 @@ function CustomDrawer(props) {
                 onPress={() => {
                   props.navigation.navigate(NavigationStrings.BRANDS);
                 }}
-                icon={() => <Image source={imagePath.icAllDeals} />}
+                icon={() => (
+                  <View style={{marginRight: -20}}>
+                    <Image source={imagePath.icAllDeals} />
+                  </View>
+                )}
               />
               <DrawerItem
                 label={NavigationStrings.CATEGORIES}
                 onPress={() => {
                   props.navigation.navigate(NavigationStrings.BRANDS);
                 }}
-                icon={() => <Image source={imagePath.icCategories} />}
+                icon={() => (
+                  <View style={{marginRight: -20}}>
+                    <Image source={imagePath.icCategories} />
+                  </View>
+                )}
               />
               <DrawerItem
                 label={NavigationStrings.WISHLIST}
                 onPress={() => {
                   props.navigation.navigate(NavigationStrings.WISHLIST);
                 }}
-                icon={() => <Image source={imagePath.icWishlist} />}
+                icon={() => (
+                  <View style={{marginRight: -20}}>
+                    <Image source={imagePath.icWishlist} />
+                  </View>
+                )}
               />
               <DrawerItem
                 label={NavigationStrings.MY_REVIEWS}
                 onPress={() => {
                   props.navigation.navigate(NavigationStrings.MY_REVIEWS);
                 }}
-                icon={() => <Image source={imagePath.icMyReviews} />}
+                icon={() => (
+                  <View style={{marginRight: -20}}>
+                    <Image source={imagePath.icMyReviews} />
+                  </View>
+                )}
               />
               <DrawerItem
                 label={NavigationStrings.SETTINGS}
                 onPress={() => {
                   props.navigation.navigate(NavigationStrings.SETTINGS);
                 }}
-                icon={() => <Image source={imagePath.icSettings} />}
+                icon={() => (
+                  <View style={{marginRight: -20}}>
+                    <Image source={imagePath.icSettings} />
+                  </View>
+                )}
               />
             </View>
           </View>

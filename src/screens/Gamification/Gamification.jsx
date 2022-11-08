@@ -1,8 +1,8 @@
 import React from 'react';
 import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
-import {DEVICE_HEIGHT} from '../../../constants/helper';
-import imagePath from '../../../constants/imagePath';
+import {DEVICE_HEIGHT} from '../../constants/helper';
+import imagePath from '../../constants/imagePath';
 import BottomSheet from '../../components/BottomSheet';
 
 import Header from '../../components/Header/Header';

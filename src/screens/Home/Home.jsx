@@ -1,11 +1,10 @@
-import {Pressable, SafeAreaView, ScrollView, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header/Header';
 import {styles} from './style';
-import NavigationStrings from '../../../constants/NavigationStrings';
 import SMCard from '../../components/SMCard';
-import imagePath from '../../../constants/imagePath';
-import colors from '../../../constants/colors';
+import imagePath from '../../constants/imagePath';
+import colors from '../../constants/colors';
 import LGCarousel from '../../components/LGCarousel';
 import LGCard from '../../components/LGCard';
 import ReviewCard from '../../components/ReviewCard';
@@ -18,15 +17,13 @@ import {
   ChallengesCardData,
   NewOfferData,
   partnersData,
-} from '../../../constants/helper';
+} from '../../constants/helper';
 
-const Home = ({navigation}) => {
+const Home = () => {
   return (
     <SafeAreaView>
       <Header title="Home" showSearch />
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        style={{flex: 1, paddingBottom: 600}}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <LGCarousel data={brandOffersData} />
         <SMCard title={'Partners'} data={partnersData} />
         <MDCarousel data={brandCardData} title={'Brand Offers'} />

@@ -1,9 +1,9 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../../constants/imagePath';
+import imagePath from '../../constants/imagePath';
 import Badge from '../Badge';
 import Coin from '../CoinBadge/Coin';
-import colors from '../../../constants/colors';
+import colors from '../../constants/colors';
 
 const MDCard = ({data}) => {
   return (

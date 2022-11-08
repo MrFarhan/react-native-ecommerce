@@ -1,24 +1,13 @@
 import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../../constants/imagePath';
-import {DEVICE_WIDTH} from '../../../constants/helper';
-import colors from '../../../constants/colors';
+import imagePath from '../../constants/imagePath';
+import {coinsEarnedData, DEVICE_WIDTH} from '../../constants/helper';
+import colors from '../../constants/colors';
 
 const CoinEarnedCard = () => {
-  const data = [
-    {
-      title: 'Congratulations! You have earned 1000 points on Registration',
-      time: '3:59 pm',
-    },
-    {
-      title: 'Congratulations! You have earned 500 points on Registration',
-      time: '4:05 pm',
-    },
-  ];
-
   return (
     <FlatList
-      data={data}
+      data={coinsEarnedData}
       renderItem={({item}) => {
         return (
           <View style={styles.container}>

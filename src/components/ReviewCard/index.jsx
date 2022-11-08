@@ -1,28 +1,11 @@
-import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
+import { Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../../constants/imagePath';
-import colors from '../../../constants/colors';
-import VectorIcons from '../../../constants/vectorIcons';
+import colors from '../../constants/colors';
+import VectorIcons from '../../constants/vectorIcons';
+import {DEVICE_WIDTH} from '../../constants/helper';
 
-const WIDTH = Dimensions.get('window').width;
 const ReviewCard = ({data}) => {
-  const {FontAwesome, MaterialIcons, MaterialCommunityIcons} = VectorIcons;
-  //   const data = [
-  //     {
-  //       title: 'Fitnglam',
-  //       date: 'Oct 01, 2022',
-  //       review:
-  //         'Excellent personal training. Trainers who really care and go above and beyond to help you achieve your goals.',
-  //       image: imagePath.partner1,
-  //     },
-  //     {
-  //       title: 'The Info Tech',
-  //       date: 'Nov 05, 2022',
-  //       review:
-  //         'Excellent personal training. Trainers who really care and go above and beyond to help you achieve your goals.',
-  //       image: imagePath.partner2,
-  //     },
-  //   ];
+  const {FontAwesome} = VectorIcons;
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -104,7 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   review: {
-    width: WIDTH * 0.8,
+    width: DEVICE_WIDTH * 0.8,
     color: colors.textGray,
   },
 });

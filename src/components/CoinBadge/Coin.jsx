@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../../constants/imagePath';
-import colors from '../../../constants/colors';
+import imagePath from '../../constants/imagePath';
+import colors from '../../constants/colors';
 
 const Coin = props => {
   const {count, coinStyle, coinContainerStyle} = props;

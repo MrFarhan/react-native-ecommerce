@@ -1,7 +1,7 @@
 import {Image, Platform, StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../../constants/imagePath';
-import colors from '../../../constants/colors';
+import imagePath from '../../constants/imagePath';
+import colors from '../../constants/colors';
 
 const SearchBar = () => {
   return (
