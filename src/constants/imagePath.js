@@ -15,6 +15,7 @@ export default {
 
   profileAvatar: require('../assets/images/profile-avatar.png'),
   coinImage: require('../assets/Icons/coin.png'),
+  shoeImage: require('../assets/Icons/shoe.png'),
   rightArrow: require('../assets/Icons/rightarrow.png'),
   drawerLogo: require('../assets/images/drawerlogo.jpg'),
 

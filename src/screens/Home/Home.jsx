@@ -1,29 +1,27 @@
 import {SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
-import Header from '../../components/Header/Header';
-import {styles} from './style';
-import SMCard from '../../components/SMCard';
-import imagePath from '../../constants/imagePath';
-import colors from '../../constants/colors';
-import LGCarousel from '../../components/LGCarousel';
-import LGCard from '../../components/LGCard';
-import ReviewCard from '../../components/ReviewCard';
-import BrandCard from '../../components/BrandCard';
-import MDCarousel from '../../components/MDCarousel';
+import Header from 'components/Header/Header';
+import LGCarousel from 'components/LGCarousel/index';
 import {
   brandCardData,
   brandOffersData,
   categoriesData,
   ChallengesCardData,
+  DEVICE_HEIGHT,
   NewOfferData,
   partnersData,
-} from '../../constants/helper';
+} from 'constants/helper.js';
+import SMCard from 'src/components/SMCard/index';
+import MDCarousel from 'src/components/MDCarousel/index';
+import LGCard from 'src/components/LGCard/index';
 
 const Home = () => {
   return (
     <SafeAreaView>
       <Header title="Home" showSearch />
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{height: DEVICE_HEIGHT - 200}}>
         <LGCarousel data={brandOffersData} />
         <SMCard title={'Partners'} data={partnersData} />
         <MDCarousel data={brandCardData} title={'Brand Offers'} />
@@ -33,16 +31,14 @@ const Home = () => {
           data={categoriesData}
           imageProps={{resizeMode: 'contain'}}
           imageContainerStyle={{
-            marginRight: 10,
+            marginRight: 15,
+            marginLeft: 15,
             alignItems: 'center',
             justifyContent: 'center',
             padding: 15,
             borderRadius: 10,
           }}
-          activeContainerStyle={{
-            borderWidth: 1,
-            borderColor: colors.primaryBlue,
-          }}
+          showActiveContainerStyle={true}
           imageStyle={{height: 40, width: 40}}
         />
         <MDCarousel data={ChallengesCardData} title={'Challenges'} />

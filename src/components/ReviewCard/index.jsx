@@ -1,8 +1,8 @@
-import { Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import colors from '../../constants/colors';
-import VectorIcons from '../../constants/vectorIcons';
-import {DEVICE_WIDTH} from '../../constants/helper';
+import colors from 'constants/colors';
+import VectorIcons from 'constants/vectorIcons';
+import {DEVICE_WIDTH} from 'constants/helper';
 
 const ReviewCard = ({data}) => {
   const {FontAwesome} = VectorIcons;
@@ -19,6 +19,7 @@ const ReviewCard = ({data}) => {
                   name={index >= data?.rating ? 'star-o' : 'star'}
                   color={colors.primaryYellow}
                   style={styles.star}
+                  key={index}
                 />
               ))}
               <Text style={styles.rating}>{data?.rating}</Text>

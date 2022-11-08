@@ -1,16 +1,7 @@
 import React, {useState} from 'react';
-import {
-  Dimensions,
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import colors from '../../constants/colors';
-
-const WIDTH = Dimensions.get('window').width;
-const HEIGHT = Dimensions.get('window').height;
+import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import colors from 'constants/colors';
+import {DEVICE_HEIGHT, DEVICE_WIDTH} from 'src/constants/helper';
 
 const LGCarousel = ({data}) => {
   const [activeImage, setActiveImage] = useState(0);
@@ -19,8 +10,10 @@ const LGCarousel = ({data}) => {
       <View style={styles.wrap}>
         <FlatList
           data={data}
-          renderItem={({item}) => (
+          keyExtractor={(item) => item.id}
+          renderItem={({item}, index) => (
             <Image
+              key={index}
               resizeMode="stretch"
               style={styles.wrap}
               source={item?.image}
@@ -36,6 +29,7 @@ const LGCarousel = ({data}) => {
             );
             setActiveImage(index);
           }}
+          pagingEnabled
           horizontal
           showsHorizontalScrollIndicator={false}
         />
@@ -62,8 +56,8 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   wrap: {
-    width: WIDTH,
-    height: HEIGHT * 0.25,
+    width: DEVICE_WIDTH,
+    height: DEVICE_HEIGHT * 0.25,
   },
   wrapDot: {
     position: 'absolute',
@@ -73,10 +67,16 @@ const styles = StyleSheet.create({
   },
   dotActive: {
     margin: 3,
+    marginRight: 1,
+    marginBottom: 9,
+    fontSize: 10,
     color: colors.primaryBlue,
   },
   dot: {
     margin: 3,
+    marginRight: 1,
+    marginBottom: 9,
+    fontSize: 10,
     color: 'white',
   },
 });

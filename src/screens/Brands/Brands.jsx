@@ -44,7 +44,7 @@ const Brands = ({navigation}) => {
           numColumns={2}
           data={BrandPageData}
           renderItem={({item}) => <MDCard data={item} />}
-          keyExtractor={({item}) => item.id}
+          keyExtractor={(item) => item.id}
 
         />
       </View>

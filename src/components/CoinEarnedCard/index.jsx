@@ -8,6 +8,7 @@ const CoinEarnedCard = () => {
   return (
     <FlatList
       data={coinsEarnedData}
+      keyExtractor={(item) => item.id}
       renderItem={({item}) => {
         return (
           <View style={styles.container}>

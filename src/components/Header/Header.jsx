@@ -25,7 +25,7 @@ const Header = ({title, goBack, showSearch}) => {
           {showSearch && (
             <Image source={imagePath.searchImage} style={styles.search} />
           )}
-          <Coin count={'2,048'} />
+          <Coin coinCount={'2,048'} />
         </View>
       </View>
     </SafeAreaView>

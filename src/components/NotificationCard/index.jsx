@@ -30,6 +30,7 @@ const NotificationCard = () => {
           </View>
         );
       }}
+      keyExtractor={item => item.id}
     />
   );
 };

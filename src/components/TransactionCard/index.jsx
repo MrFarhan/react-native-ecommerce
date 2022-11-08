@@ -54,7 +54,7 @@ const TransactionCard = ({data}) => {
           justifyContent: 'space-between',
         }}>
         <Coin
-          count={data.coinCount}
+          coinCount={data.coinCount}
           coinContainerStyle={{padding: 4, paddingHorizontal: 10}}
         />
         <Badge title={data?.badgeName} />

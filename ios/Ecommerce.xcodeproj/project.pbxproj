@@ -30,6 +30,7 @@
 		9D21CF0EEA3443E6A6B5C809 /* Oxygen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B0BF2FB80AD458EBEA3DB7E /* Oxygen-Regular.ttf */; };
 		9D22330E6A9C468AA7B9CC63 /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C89D4B1F69D46308D30C90F /* SourceSansPro-Italic.ttf */; };
 		9DAAAD0280954E5FB0961ED4 /* Oxygen-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D019F40A674A15A99C478A /* Oxygen-Light.ttf */; };
+		ACDE347CEB5746AF8C75FD64 /* SFUIDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC792E2EDB2D4B7992058C26 /* SFUIDisplay-Medium.ttf */; };
 		BFEAEDFE402F4C5BAAD330AF /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D8C1EA5D10C47FC87CF355E /* SourceSansPro-Regular.ttf */; };
 		CF748EB5FB8F4CC7A775FC65 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC3E83D144A34D53A6922DD7 /* SourceSansPro-SemiBold.ttf */; };
 		D0C4A8C7AAC54E17B02A1351 /* Effra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA1BBD725DD45D6BCB778B8 /* Effra-Regular.ttf */; };
@@ -89,6 +90,7 @@
 		A9A12557FEB045C4C9A4DA05 /* Pods-EcommerceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceTests.debug.xcconfig"; path = "Target Support Files/Pods-EcommerceTests/Pods-EcommerceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB3ABD3E31804E5E961B2D17 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-LightItalic.ttf"; path = "../src/assets/fonts/SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
 		C5BB8FA0629049AE99730544 /* HelveticaNeue.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeue.ttf; path = ../src/assets/fonts/HelveticaNeue.ttf; sourceTree = "<group>"; };
+		CC792E2EDB2D4B7992058C26 /* SFUIDisplay-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFUIDisplay-Medium.ttf"; path = "../src/assets/fonts/SFUIDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		CF3D0380C6E24320860F4DFD /* icomoon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = icomoon.ttf; path = ../src/assets/fonts/icomoon.ttf; sourceTree = "<group>"; };
 		D54B6DBFEBB7BAD874071B05 /* Pods-EcommerceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceTests.release.xcconfig"; path = "Target Support Files/Pods-EcommerceTests/Pods-EcommerceTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED1CE8C9E2694482A195756F /* libPods-Ecommerce-EcommerceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ecommerce-EcommerceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 				F18EABE0218C4B4FADBDBE95 /* SourceSansPro-SemiBoldItalic.ttf */,
 				CF3D0380C6E24320860F4DFD /* icomoon.ttf */,
 				88342C50A5F84081A64110EB /* SFUIDisplay-Semibold.ttf */,
+				CC792E2EDB2D4B7992058C26 /* SFUIDisplay-Medium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				30B5A8E1D4E142579FE1734D /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
 				E0BB7D965006432AB39DCC26 /* icomoon.ttf in Resources */,
 				E7B91D99134B41579A11DD46 /* SFUIDisplay-Semibold.ttf in Resources */,
+				ACDE347CEB5746AF8C75FD64 /* SFUIDisplay-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

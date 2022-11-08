@@ -36,7 +36,7 @@ const WalletSectionHeader = () => {
       </View>
       <View style={{width: 80}}>
         <Coin
-          count={'2,048'}
+          coinCount={'2,048'}
           coinStyle={{
             color: colors.primaryBlue,
             fontFamily: 'SFUIDisplay-bold',

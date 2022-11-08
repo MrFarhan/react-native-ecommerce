@@ -1,22 +1,13 @@
-import {useFocusEffect} from '@react-navigation/native';
 import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  Image,
-  Dimensions,
-} from 'react-native';
+import {StyleSheet, FlatList, Dimensions, View} from 'react-native';
 import Animated, {
   interpolate,
   Extrapolate,
   useSharedValue,
   useAnimatedStyle,
 } from 'react-native-reanimated';
-import imagePath from '../../constants/imagePath';
-import BrandCard from '../BrandCard';
-import SectionHeader from '../SectionHeader';
+import BrandCard from '../BrandCard/index';
+import SectionHeader from '../SectionHeader/index';
 
 const SRC_WIDTH = Dimensions.get('window').width;
 const CARD_LENGTH = SRC_WIDTH * 0.8;
@@ -24,7 +15,7 @@ const SPACING = SRC_WIDTH * 0.02;
 const SIDECARD_LENGTH = (SRC_WIDTH * 0.18) / 2;
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 
-function Item({index, scrollX,data}) {
+function Item({index, scrollX, data}) {
   const size = useSharedValue(1);
 
   const inputRange = [
@@ -71,33 +62,17 @@ function Item({index, scrollX,data}) {
         },
       ]}>
       <BrandCard data={data}/>
-      {/* <Image
-        source={imagePath.random2}
-        style={{width: '100%', height: '100%'}}
-      /> */}
     </Animated.View>
   );
 }
-//Default data
-const CarouselData = [
-  {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'First Item',
-  },
-  {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Second Item',
-  },
-];
 
 export default function MDCarousel({title, data}) {
   const [scrollX, setScrollX] = useState(0);
 
   return (
-    <Animated.View style={{paddingVertical: 20}}>
+    <Animated.View style={{paddingHorizontal: 10}}>
       {title && (
-        <View
-          style={{paddingHorizontal: 20, paddingTop: 10, paddingBottom: 10}}>
+        <View style={{paddingBottom: 15}}>
           <SectionHeader title={title} />
         </View>
       )}
@@ -112,7 +87,9 @@ export default function MDCarousel({title, data}) {
         data={data}
         horizontal={true}
         renderItem={({item, index}) => {
-          return <Item index={index} scrollX={scrollX} data={item}/>;
+          return (
+            <Item index={index} scrollX={scrollX} data={item} key={index} />
+          );
         }}
         keyExtractor={item => item.id}
         onScroll={event => {
@@ -126,7 +103,6 @@ export default function MDCarousel({title, data}) {
 const styles = StyleSheet.create({
   card: {
     width: CARD_LENGTH,
-    // height: 150,
     overflow: 'hidden',
     borderRadius: 15,
   },

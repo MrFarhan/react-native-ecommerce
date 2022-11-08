@@ -1,7 +1,6 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {DEVICE_WIDTH} from '../../constants/helper';
-import colors from '../../constants/colors';
+import colors from 'constants/colors';
 import Badge from '../Badge';
 import Coin from '../CoinBadge/Coin';
 
@@ -21,9 +20,16 @@ const BrandCard = ({data}) => {
       </View>
       <View style={styles.rightGroup}>
         <View style={styles.coin}>
-          <Coin count={data?.coins} />
+          <Coin
+            // coinCount={data?.coinCount}
+            shoeCount={data.shoeCount}
+            coinContainerStyle={{maxWidth: 90}}
+          />
         </View>
-        <Badge title={data?.otherDealsDetail} />
+        <Badge
+          title={data?.otherDealsDetail}
+          containerStyle={{maxWidth: 100}}
+        />
       </View>
     </View>
   );
@@ -36,7 +42,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginRight: 10,
     height: 250, // position
-    // borderRadius: 5,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -52,7 +57,6 @@ const styles = StyleSheet.create({
   imageContainer: {
     position: 'relative',
     height: '100%',
-    // borderRadius: 12,
   },
   image: {
     borderTopStartRadius: 12,
@@ -82,15 +86,17 @@ const styles = StyleSheet.create({
     color: colors.textGray,
     fontSize: 14,
     fontFamily: 'SFUIDisplay-Regular',
+    paddingBottom: 3,
   },
   offerTitle: {
-    fontFamily: 'SFUIDisplay-bold',
+    fontFamily: 'SFUIDisplay-Semibold',
     fontSize: 18,
+    paddingBottom: 3,
   },
   offerExpiry: {
     fontSize: 10,
-    color: colors.textGray,
-    fontFamily: 'SFUIDisplay-Regular',
+    color: '#73879B',
+    fontFamily: 'SFUIDisplay-Medium',
   },
   coin: {
     paddingBottom: 10,

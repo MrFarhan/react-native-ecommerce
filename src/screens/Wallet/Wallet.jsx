@@ -79,7 +79,7 @@ const Wallet = ({navigation}) => {
         <FlatList
           data={transactionData}
           renderItem={({item}) => <TransactionCard data={item} />}
-          keyExtractor={({item}) => item.id}
+          keyExtractor={(item) => item.id}
         />
       </View>
     </View>

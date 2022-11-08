@@ -1,14 +1,17 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import imagePath from '../../constants/imagePath';
-import colors from '../../constants/colors';
+import imagePath from 'constants/imagePath';
+import colors from 'constants/colors';
 
 const Coin = props => {
-  const {count, coinStyle, coinContainerStyle} = props;
+  const {coinCount, shoeCount, coinStyle, coinContainerStyle} = props;
   return (
     <View style={[styles.container, coinContainerStyle]}>
-      <Image source={imagePath.coinImage} style={styles.coin} />
-      <Text style={[styles.count, coinStyle]}>{count}</Text>
+      <Image
+        source={coinCount ? imagePath.coinImage : imagePath.shoeImage}
+        style={styles.coin}
+      />
+      <Text style={[styles.count, coinStyle]}>{coinCount || shoeCount}</Text>
     </View>
   );
 };

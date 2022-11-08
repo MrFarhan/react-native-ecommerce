@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FlatList, Image, Pressable, StyleSheet, Text, View} from 'react-native';
-import SectionHeader from '../SectionHeader';
-import imagePath from '../../constants/imagePath';
+import colors from 'src/constants/colors';
+import SectionHeader from '../SectionHeader/index';
 
 const SMCard = ({
   title,
@@ -9,9 +9,9 @@ const SMCard = ({
   imageProps = {},
   imageContainerStyle = {},
   imageStyle = {},
-  activeContainerStyle = {},
+  showActiveContainerStyle
 }) => {
-  const [activeItem, setActiveItem] = useState(27);
+  const [activeItem, setActiveItem] = useState(22);
   const cardRenderer = ({item}) => {
     return (
       <View>
@@ -19,7 +19,11 @@ const SMCard = ({
           style={[
             styles.container,
             {...imageContainerStyle},
-            {...(activeItem == item?.image && {...activeContainerStyle})},
+            {
+              ...(activeItem == item?.image &&
+                showActiveContainerStyle &&
+                styles.activeContainer),
+            },
           ]}
           onPress={() => setActiveItem(item?.image)}>
           <Image
@@ -30,7 +34,7 @@ const SMCard = ({
           />
         </Pressable>
         {item?.bottomLabel && (
-          <Text style={{textAlign: 'center', marginRight: 10, marginTop: 5}}>
+          <Text style={{textAlign: 'center', marginRight: 15, marginTop: 5}}>
             {item?.bottomLabel}
           </Text>
         )}
@@ -38,17 +42,23 @@ const SMCard = ({
     );
   };
   return (
-    <View style={{paddingHorizontal: 15}}>
-      {title && <SectionHeader title={title} />}
+    <View style={{paddingHorizontal: 10}}>
+      {title && (
+        <View style={{paddingBottom: 15}}>
+          <SectionHeader title={title} />
+        </View>
+      )}
       <FlatList
         data={data}
-        renderItem={(item) => cardRenderer(item)}
-        keyExtractor={(item) => item.id}
+        scrollEventThrottle={1}
+        renderItem={item => cardRenderer(item)}
+        keyExtractor={item => item.id}
         contentContainerStyle={{
           flexDirection: 'row',
         }}
         horizontal
         showsHorizontalScrollIndicator={false}
+        pagingEnabled
       />
     </View>
   );
@@ -59,14 +69,13 @@ export default SMCard;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    // borderWidth: 1,
-    // marginRight: 10,
-    // borderRadius: 10,
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // padding: 15,
+  },
+  activeContainer: {
+    borderWidth: 1,
+    borderColor: colors.primaryBlue,
   },
   image: {
     height: 80,
+    width: 80,
   },
 });

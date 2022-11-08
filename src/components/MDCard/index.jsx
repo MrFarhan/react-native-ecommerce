@@ -67,7 +67,7 @@ const MDCard = ({data}) => {
             alignItems: 'center',
           }}
         />
-        <Coin count={data.coinsCount} />
+        <Coin coinCount={data.coinsCount} />
         <Text
           style={{
             fontSize: 8,

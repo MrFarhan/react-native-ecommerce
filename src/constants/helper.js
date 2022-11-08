@@ -44,20 +44,22 @@ export const CarouselData = [
 
 export const brandCardData = [
   {
+    id:91,
     title: 'MrFarhan',
     image: imagePath.carousel1,
     offerTitle: 'Get 30% off',
     offerExpiry: '* Expiry date 23 sept 2022',
-    coins: '3500',
+    coinCount: '3500',
     otherDealsDetail: '53 Deals left',
     brandLogo: imagePath.partner1,
   },
   {
+    id:92,
     title: 'The Info Tech',
     image: imagePath.carousel2,
     offerTitle: 'Get 30% off',
     offerExpiry: '* Expiry date 23 sept 2022',
-    coins: '3500',
+    coinCount: '3500',
     otherDealsDetail: '77 Deals left',
     brandLogo: imagePath.partner2,
   },
@@ -70,7 +72,7 @@ export const ChallengesCardData = [
     image: imagePath.carousel2,
     offerTitle: 'Get 30% off',
     offerExpiry: '* Expiry date 23 sept 2022',
-    coins: '3500',
+    shoeCount: '3500',
     otherDealsDetail: '53 Deals left',
     brandLogo: imagePath.partner3,
   },
@@ -80,7 +82,7 @@ export const ChallengesCardData = [
     image: imagePath.carousel1,
     offerTitle: 'Get 30% off',
     offerExpiry: '* Expiry date 23 sept 2022',
-    coins: '3500',
+    shoeCount: '3500',
     otherDealsDetail: '77 Deals left',
     brandLogo: imagePath.partner4,
   },
@@ -93,7 +95,7 @@ export const NewOfferData = [
     image: imagePath.carousel1,
     offerTitle: 'Get 30% off',
     offerExpiry: '* Expiry date 23 sept 2022',
-    coins: '3500',
+    coinCount: '3500',
     otherDealsDetail: '53 Deals left',
     brandLogo: imagePath.partner5,
   },
@@ -103,7 +105,7 @@ export const NewOfferData = [
     image: imagePath.carousel2,
     offerTitle: 'Get 30% off',
     offerExpiry: '* Expiry date 23 sept 2022',
-    coins: '3500',
+    coinCount: '3500',
     otherDealsDetail: '77 Deals left',
     brandLogo: imagePath.partner1,
   },
@@ -189,7 +191,7 @@ export const notificationData = [
 
 export const lgCardData = [
   {
-    id: 31,
+    id: 100,
     title: 'Fitnglam',
     date: 'Oct 01, 2022',
     review:
@@ -198,7 +200,7 @@ export const lgCardData = [
     rating: 4.0,
   },
   {
-    id: 32,
+    id: 101,
     title: 'The Info Tech',
     date: 'Nov 05, 2022',
     review:

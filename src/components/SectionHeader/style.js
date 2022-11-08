@@ -5,16 +5,16 @@ export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // paddingHorizontal: 10,
-    paddingVertical:10
+    paddingTop: 30,
+    paddingBottom: 10,
+    paddingHorizontal: 8,
   },
   Heading: {
     fontFamily: 'SFUIDisplay-Bold',
     fontSize: 16,
-    margin:0,
-    padding:0,
-    color: colors.primaryBlack,
-
+    margin: 0,
+    padding: 0,
+    color: '#000000',
   },
   seeAll: {
     fontFamily: 'SFUIDisplay-Regular',
