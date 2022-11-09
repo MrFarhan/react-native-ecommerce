@@ -1,5 +1,5 @@
 import React from 'react';
-import BottomTabNavigation from './BottomTabNavigation';
+import BottomTabNavigation from './BottomTabNavigation/index';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomDrawer from './CustomDrawer';
 

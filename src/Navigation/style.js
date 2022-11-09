@@ -42,6 +42,9 @@ export const styles = StyleSheet.create({
     // bottom:0
   },
   termsGroup: {
+    flexDirection: 'row',
+    // justifyContent: 'space-evenly',
+    flexWrap: 'wrap',
     paddingHorizontal: 15,
     paddingVertical: 10,
   },

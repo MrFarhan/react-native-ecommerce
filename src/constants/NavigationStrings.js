@@ -9,6 +9,8 @@ export default {
   ALL_DEALS:'All Deals',
   CATEGORIES:'Categories',
   WISHLIST:'Wishlist',
-  MY_REVIEWS:'My Reviews',
-  SETTINGS:'Settings'
+  MY_REVIEWS:'MyReviews',
+  SETTINGS:'Settings',
+  TOS:'TOS',
+  PRIVACY_POLICY:"PrivacyPolicy"
 };

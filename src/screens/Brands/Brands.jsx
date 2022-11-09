@@ -1,11 +1,10 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Header from '../../components/Header/Header';
-import {styles} from './style';
-import SMCard from '../../components/SMCard';
-import {BrandPageData, partnersData} from '../../constants/helper';
-import colors from '../../constants/colors';
-import MDCard from '../../components/MDCard';
+import {FlatList, View} from 'react-native';
+import Header from 'components/Header/Header';
+import SMCard from 'components/SMCard/index';
+import {BrandPageData, partnersData} from 'constants/helper';
+import colors from 'constants/colors';
+import MDCard from 'components/MDCard/index';
 
 const Brands = ({navigation}) => {
   return (
@@ -30,8 +29,6 @@ const Brands = ({navigation}) => {
 
       <View
         style={{
-          // paddingHorizontal: 20,
-          // paddingVertical: 20,
           flexDirection: 'row',
           justifyContent: 'flex-start',
           flexWrap: 'wrap',
@@ -44,8 +41,7 @@ const Brands = ({navigation}) => {
           numColumns={2}
           data={BrandPageData}
           renderItem={({item}) => <MDCard data={item} />}
-          keyExtractor={(item) => item.id}
-
+          keyExtractor={item => item.id}
         />
       </View>
     </>

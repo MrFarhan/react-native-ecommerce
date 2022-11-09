@@ -1,13 +1,9 @@
-import {
-  DrawerContentScrollView,
-  DrawerItem,
-  DrawerItemList,
-} from '@react-navigation/drawer';
+import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {Image, Pressable, Text, View} from 'react-native';
-import imagePath from '../constants/imagePath';
-import NavigationStrings from '../constants/NavigationStrings';
-import Button from '../components/Button/Button';
-import Coin from '../components/CoinBadge/Coin';
+import imagePath from 'constants/imagePath';
+import NavigationStrings from 'constants/NavigationStrings';
+import Button from 'components/Button/Button';
+import Coin from 'components/CoinBadge/Coin';
 import {styles} from './style';
 
 function CustomDrawer(props) {
@@ -55,7 +51,7 @@ function CustomDrawer(props) {
               <DrawerItem
                 label={NavigationStrings.CATEGORIES}
                 onPress={() => {
-                  props.navigation.navigate(NavigationStrings.BRANDS);
+                  props.navigation.navigate(NavigationStrings.CATEGORIES);
                 }}
                 icon={() => (
                   <View style={{marginRight: -20}}>
@@ -102,12 +98,19 @@ function CustomDrawer(props) {
       </DrawerContentScrollView>
       <View style={styles.bottomGroup}>
         <View style={styles.termsGroup}>
-          <Text>
-            <Text style={styles.linkText}>Terms of service</Text> and{' '}
-            <Text style={styles.linkText}>Privacy policy</Text>
-          </Text>
-          <Text>
-            copyright č 2022,<Text style={styles.linkText}> MrFarhan</Text>{' '}
+          <Pressable
+            onPress={() => props.navigation.navigate(NavigationStrings.TOS)}>
+            <Text style={styles.linkText}>Terms of Service </Text>
+          </Pressable>
+          <Text>and </Text>
+          <Pressable
+            onPress={() =>
+              props.navigation.navigate(NavigationStrings.PRIVACY_POLICY)
+            }>
+            <Text style={styles.linkText}>Privacy Policy</Text>
+          </Pressable>
+          <Text style={styles.copyright}>
+            Copyright © 2022,<Text style={styles.linkText}> MrFarhan</Text>
           </Text>
         </View>
         <Button title="Logout" leftIcon={imagePath.rightArrow} />
