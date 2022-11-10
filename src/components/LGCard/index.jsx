@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  Dimensions,
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import {DEVICE_WIDTH, lgCardData} from 'constants/helper';
 import ReviewCard from '../ReviewCard/index';
 import SectionHeader from '../SectionHeader';

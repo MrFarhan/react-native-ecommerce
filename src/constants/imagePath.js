@@ -24,7 +24,6 @@ export default {
   partner2: require('../assets/images/partners/partner2.png'),
   partner3: require('../assets/images/partners/partner3.png'),
   partner4: require('../assets/images/partners/partner4.png'),
-  partner4: require('../assets/images/partners/partner4.png'),
   partner5: require('../assets/images/partners/partner5.png'),
   all: require('../assets/images/partners/all.png'),
 
@@ -33,7 +32,6 @@ export default {
   category1: require('../assets/images/categories/category1.png'),
   category2: require('../assets/images/categories/category2.png'),
   category3: require('../assets/images/categories/category3.png'),
-  category4: require('../assets/images/categories/category4.png'),
   category4: require('../assets/images/categories/category4.png'),
 
   // brand offers
